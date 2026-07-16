@@ -79,17 +79,18 @@ demo_backup_to_zip/
 
 ## Tests réalisés
 
-La version actuelle est validée avec une batterie de tests sur bac à sable.
+La version actuelle est vérifiée dans un bac à sable reproductible.
 
-Tests couverts :
+La démonstration couvre huit points de contrôle, regroupés dans plusieurs fonctions de test :
 
 1. Bac à sable créé correctement.
 2. Source absente refusée proprement.
 3. Source existante mais non dossier refusée proprement.
 4. Première sauvegarde créée sans écrasement.
-5. Contenu interne de l’archive propre.
-6. Anciennes archives ZIP exclues du contenu final.
-7. Relance stable avec création de l’archive suivante.
+5. Relance stable avec création de l’archive suivante.
+6. Contenu attendu présent dans l’archive.
+7. Anciennes archives ZIP exclues du contenu final.
+8. Absence de chemins absolus dans les noms internes de l’archive.
 
 Extrait de sortie terminal :
 
@@ -108,7 +109,7 @@ Test source absente : OK
 REFUS : la source existe mais ce n'est pas un dossier.
 Test source fichier : OK
 
---- TEST 4 ET 7 : CREATION + RELANCE ---
+--- CREATION + RELANCE SANS ECRASEMENT ---
 Première archive créée : .../sauvegardes/dates_3.zip
 Deuxième archive créée : .../sauvegardes/dates_4.zip
 Test création + relance : OK
