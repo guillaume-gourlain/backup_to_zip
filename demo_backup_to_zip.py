@@ -255,7 +255,7 @@ def tester_source_fichier(dossier_reference):
 
 def tester_creation_et_relance(dossier_source):
     print()
-    print("--- TEST 4 ET 7 : CREATION + RELANCE ---")
+    print("--- CREATION + RELANCE SANS ECRASEMENT ---")
 
     chemin_archive_1 = backup_to_zip(dossier_source)
     chemin_archive_2 = backup_to_zip(dossier_source)
